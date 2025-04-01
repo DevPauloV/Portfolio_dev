@@ -62,14 +62,14 @@ body {
     width: 100%;
 }
 
-.foto-perfil {
+/* .foto-perfil {
     width: 200px;
     height: 200px;
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
     border-radius: 50%;
     border: 4px solid var(--vidro);
     animation: flutuar 5s ease-in-out infinite;
-}
+} */
 
 .cabecalho {
     min-height: 100vh;
@@ -114,7 +114,7 @@ h1 {
 }
 
 .sobre-paragrafo {
-    text-align: center;
+    text-align: justify;
     font-size: 1.2rem;
 }
 
@@ -192,6 +192,7 @@ h1 {
 
 .campo-form {
     width: 100%;
+    resize: none;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
@@ -218,7 +219,7 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     width: 100%;
-    transition: all 0.5 ease;
+    transition: all 0.4s ease-in-out;
 }
 
 .botao-form:hover {
@@ -238,7 +239,7 @@ h1 {
         radial-gradient(circle at 90% 80%, var(--segundaria) 0%, transparent 20%), var(--maisEscuro);
 }
 
-@keyframes flutuar {
+/* @keyframes flutuar {
     0%, 100% {
         transform: translateY(0);
     }
@@ -246,4 +247,50 @@ h1 {
     50% {
         transform: translateY(-20px);
     }
+} */
+
+
+.redes-sociais {
+    display: flex;
+    padding: 10rem;
+    justify-content: center;
+    gap: 20px; 
+    margin-top: 30px;
+}
+
+.icone-social {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.icone-social:hover {
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+}
+
+
+.botao-redes {
+    background: linear-gradient(45deg, var(--primaria), var(--segundaria));
+    color: var(--claro);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none; 
+    outline: none;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    
+}
+
+.botao-redes:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+    outline: none;
 }
