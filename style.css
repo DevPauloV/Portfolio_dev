@@ -138,8 +138,9 @@ h1 {
 }
 
 .icone-habilidade {
-    width: 60px;
-    height: auto;
+    width: 90px; 
+    height: 90px; 
+    object-fit: contain;
     transition: transform 0.3s ease;
     filter: drop-shadow(0 0 5px rgba(79, 70, 229, 0.3));
 }
@@ -148,6 +149,7 @@ h1 {
     transform: scale(1.15);
     filter: drop-shadow(0 0 10px rgba(79, 70, 229, 0.5));
 }
+
 
 
 .projetos {
