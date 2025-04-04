@@ -118,6 +118,38 @@ h1 {
     font-size: 1.2rem;
 }
 
+
+.habilidade {
+    padding: 6rem 2rem;
+}
+
+.habilidade-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.habilidade-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.icone-habilidade {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(79, 70, 229, 0.3));
+}
+
+.icone-habilidade:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 10px rgba(79, 70, 229, 0.5));
+}
+
+
 .projetos {
     padding: 6rem 2rem;
 }
@@ -293,4 +325,18 @@ h1 {
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
     outline: none;
+}
+
+
+
+@media (max-width: 1024px) {
+    .habilidade-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .habilidade-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
