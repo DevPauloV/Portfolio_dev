@@ -189,7 +189,7 @@ h1 {
 .projetos-imagem {
     height: 200px;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .caixa-textos-projeto {
@@ -198,6 +198,7 @@ h1 {
 .paragrafo-projetos {
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.25rem;
+    text-align: justify;
 }
 .info-projetos {
     margin-bottom: 5px;
