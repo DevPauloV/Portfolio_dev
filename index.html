@@ -128,37 +128,38 @@
     </section>
 
     <section id="contato" class="contatos">
-        <h2 class="contatos-titulo">Entre em Contato</h2>
+    <h2 class="contatos-titulo">Entre em Contato</h2>
 
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-            <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="nome">
-            </div>
+    <form class="formulario-contato" id="formulario" onsubmit="enviarEmail(event)">
+        <div class="grupo-form">
+            <input placeholder="Nome" class="campo-form" id="nome" required>
+        </div>
 
-            <div class="grupo-form">
-                <textarea class="campo-form" id="mensagem" rows="6" placeholder="Digite sua Mensagem"></textarea>
-            </div>
+        <div class="grupo-form">
+            <textarea class="campo-form" id="mensagem" rows="6" placeholder="Digite sua Mensagem" required></textarea>
+        </div>
 
-            <button type="submit" class="botao-form">Enviar Whatsapp</button>
-        </form>
+        <button type="submit" class="botao-form">Enviar Email</button>
+    </form>
+</section>
 
-    </section>
 
 
     <script>
-        function enviarWhats(event) {
-            event.preventDefault();
-            const nome = document.getElementById('nome').value;
-            const mensagem = document.getElementById('mensagem').value;
-            const telefone = '5518996310965';
+      function enviarEmail(event) {
+    event.preventDefault();
 
-            const texto = `Olá, Me chamo ${nome}, ${mensagem}`;
-            const msgFormatada = encodeURIComponent(texto);
+    const nome = document.getElementById('nome').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+    const destinatario = 'vitorcanalle@email.com'; // <-- Substitua pelo seu e-mail
 
-            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+    const assunto = encodeURIComponent('Mensagem de Contato do Site');
+    const corpo = encodeURIComponent(`Olá, me chamo ${nome}.\n\n${mensagem}`);
 
-            window.open(url, '_blank');
-        }
+    const url = `mailto:${destinatario}?subject=${assunto}&body=${corpo}`;
+
+    window.location.href = url;
+}
     </script>
 
 
